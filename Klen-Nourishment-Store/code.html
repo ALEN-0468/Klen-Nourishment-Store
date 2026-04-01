@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Klen Nourishment | Premium High-Protein Fuel</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-container": "#ffc791",
+                        "on-background": "#2d2f2f",
+                        "background": "#f6f6f6",
+                        "error-dim": "#b92902",
+                        "on-error": "#ffefec",
+                        "on-tertiary-fixed": "#00460e",
+                        "secondary-fixed-dim": "#ffb467",
+                        "secondary-fixed": "#ffc791",
+                        "inverse-primary": "#91f78e",
+                        "surface-container": "#e7e8e8",
+                        "on-secondary-container": "#6a3c00",
+                        "surface-dim": "#d3d5d5",
+                        "inverse-on-surface": "#9c9d9d",
+                        "inverse-surface": "#0c0f0f",
+                        "on-surface": "#2d2f2f",
+                        "surface-variant": "#dbdddd",
+                        "on-surface-variant": "#5a5c5c",
+                        "surface-container-highest": "#dbdddd",
+                        "outline": "#767777",
+                        "error": "#b02500",
+                        "error-container": "#f95630",
+                        "on-tertiary-fixed-variant": "#12661e",
+                        "on-primary-container": "#005e17",
+                        "on-primary": "#d1ffc8",
+                        "on-secondary-fixed-variant": "#774400",
+                        "on-tertiary-container": "#005c15",
+                        "surface-container-low": "#f0f1f1",
+                        "tertiary-container": "#9df197",
+                        "on-secondary-fixed": "#4f2c00",
+                        "on-error-container": "#520c00",
+                        "tertiary-dim": "#025d16",
+                        "tertiary-fixed-dim": "#90e28a",
+                        "outline-variant": "#acadad",
+                        "secondary-dim": "#764400",
+                        "surface-bright": "#f6f6f6",
+                        "on-secondary": "#fff0e5",
+                        "on-primary-fixed-variant": "#00691a",
+                        "on-primary-fixed": "#00480f",
+                        "tertiary-fixed": "#9df197",
+                        "primary-container": "#91f78e",
+                        "surface-container-high": "#e1e3e3",
+                        "primary-fixed": "#91f78e",
+                        "on-tertiary": "#d1ffc8",
+                        "primary-fixed-dim": "#83e881",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#006b1b",
+                        "primary": "#006b1b",
+                        "tertiary": "#176a21",
+                        "surface": "#f6f6f6",
+                        "secondary": "#874e00",
+                        "primary-dim": "#005d16"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .editorial-shadow {
+            box-shadow: 0 40px 40px rgba(45, 47, 47, 0.06);
+            transition: box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            box-shadow: 0 50px 60px rgba(45, 47, 47, 0.12);
+        }
+
+        /* Premium Transitions */
+        .premium-transition {
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(3deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(3deg);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Scroll Reveal Effect */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Button Glow & Feedback */
+        .btn-premium {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+            box-shadow: 0 10px 20px -5px rgba(0, 107, 27, 0.3);
+        }
+
+        .btn-premium:active {
+            transform: scale(0.96);
+        }
+
+        /* Nav Link Animation */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: currentColor;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+
+
+
+        /* Non-Veg Button Hover Effect */
+        .btn-cart-non-veg {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-cart-non-veg:hover {
+            /* Lift the button */
+            transform: translateY(-3px);
+            /* Intensify the primary green shadow */
+            box-shadow: 0 10px 25px -5px rgba(0, 107, 27, 0.4);
+            /* Slight brightness boost */
+            filter: brightness(1.1);
+        }
+
+        .btn-cart-non-veg:active {
+            /* Feedback when clicked */
+            transform: translateY(-1px) scale(0.96);
+        }
+
+        /* Optional: Subtle Shine Flash Effect */
+        .btn-cart-non-veg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.2),
+                    transparent);
+            transition: 0.5s;
+        }
+
+        .btn-cart-non-veg:hover::after {
+            left: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface antialiased">
+
+    <nav class="fixed top-0 w-full z-[100] bg-white/80 backdrop-blur-xl shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="flex items-center gap-3 group relative z-[110]" href="#home">
+                <div
+                    class="h-10 w-10 flex-shrink-0 rounded-xl bg-primary flex items-center justify-center shadow-lg group-hover:rotate-12 transition-all duration-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1.8 9.2a7 7 0 0 1-9.8 8.8Z" />
+                        <path d="M18 16a6 6 0 0 0-5.7-5.7" />
+                    </svg>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="flex items-baseline">
+                        <span
+                            class="text-xl font-headline font-black tracking-tighter leading-none text-zinc-900 group-hover:text-primary transition-colors">
+                            Klen
+                        </span>
+                    </div>
+                    <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-zinc-500 leading-none mt-1">
+                        Nourishment
+                    </span>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8">
+                <a class="nav-link font-headline font-bold text-green-700" href="#home">Home</a>
+                <a class="nav-link font-headline font-bold text-zinc-600 hover:text-zinc-900 transition-colors"
+                    href="#menu">Menu</a>
+                <a class="nav-link font-headline font-bold text-zinc-600 hover:text-zinc-900 transition-colors"
+                    href="#why-us">Why Us</a>
+                <a class="nav-link font-headline font-bold text-zinc-600 hover:text-zinc-900 transition-colors"
+                    href="#nutrition">Nutrition</a>
+                    <a class="nav-link font-headline font-bold text-zinc-600 hover:text-zinc-900 transition-colors"
+                    href="#testimonials">Testimonials</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="relative group cursor-pointer hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-green-700 text-2xl">shopping_cart</span>
+                    <span
+                        class="absolute -top-2 -right-2 bg-secondary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+                </div>
+
+                <button id="menu-btn"
+                    class="lg:hidden text-zinc-900 p-1 hover:bg-zinc-100 rounded-md transition-colors relative z-[110]">
+                    <span class="material-symbols-outlined !text-2xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="absolute right-4 top-20 w-64 bg-white/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-zinc-100 p-8 transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] opacity-0 translate-y-[-20px] pointer-events-none lg:hidden">
+            <div class="flex flex-col items-center gap-6 text-center">
+                <a class="mobile-nav-link font-headline font-bold text-lg text-green-700" href="#home">Home</a>
+                <a class="mobile-nav-link font-headline font-bold text-lg text-zinc-600" href="#menu">Menu</a>
+                <a class="mobile-nav-link font-headline font-bold text-lg text-zinc-600" href="#why-us">Why Us</a>
+                <a class="mobile-nav-link font-headline font-bold text-lg text-zinc-600" href="#nutrition">Nutrition</a>
+                <a class="mobile-nav-link font-headline font-bold text-lg text-zinc-600" href="#testimonials">Testimonials</a>
+
+                <hr class="border-zinc-100 w-full my-1">
+
+                <a class="w-full bg-primary text-white py-3 px-6 rounded-full font-bold text-center shadow-lg active:scale-95 transition-transform"
+                    href="#order">
+                    Order Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        /* Underline Animation */
+        .mobile-nav-link {
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #006b1b;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .mobile-nav-link:hover::after {
+            width: 60%;
+        }
+
+        /* Staggered Entry Animation for Links */
+        #mobile-menu.active .mobile-nav-link {
+            animation: slideIn 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        #mobile-menu.active .mobile-nav-link:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        #mobile-menu.active .mobile-nav-link:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        #mobile-menu.active .mobile-nav-link:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        #mobile-menu.active .mobile-nav-link:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        #mobile-menu.active .mobile-nav-link:nth-child(5) { 
+            transition-delay: 0.5s; 
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('span');
+
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = menu.classList.contains('active');
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        function openMenu() {
+            menu.classList.add('active');
+            menu.classList.remove('opacity-0', 'translate-y-[-20px]', 'pointer-events-none');
+            menu.classList.add('opacity-100', 'translate-y-0');
+            icon.textContent = 'close';
+        }
+
+        function closeMenu() {
+            menu.classList.remove('active');
+            menu.classList.add('opacity-0', 'translate-y-[-20px]', 'pointer-events-none');
+            menu.classList.remove('opacity-100', 'translate-y-0');
+            icon.textContent = 'menu';
+        }
+
+        // Close on click outside
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+        });
+
+        // Close on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
+
+
+    <!-- Hero Section -->
+
+    <section class="relative min-h-screen flex items-center pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden bg-black"
+        id="home">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 w-full grid lg:grid-cols-2 gap-12 items-center">
+
+            <div class="z-10 order-2 lg:order-1">
+                <span
+                    class="inline-block px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-6 cursor-default transition-all duration-500 ease-in-out hover:bg-primary hover:text-white hover:shadow-lg hover:-translate-y-0.5">
+                    High Performance Fuel
+                </span>
+                <h1
+                    class="text-5xl sm:text-6xl lg:text-8xl font-headline font-black leading-[1.1] lg:leading-[0.9] tracking-tighter mb-8 text-white">
+                    Fuel Your Body <br />with <span class="text-primary">Protein</span> Power
+                </h1>
+                <p class="text-lg sm:text-xl max-w-lg mb-10 leading-relaxed text-zinc-300">
+                    Delicious Veg & Non-Veg Protein Meals crafted for peak athletic performance and everyday vitality.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                    <a class="btn-premium bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold py-5 px-10 rounded-full editorial-shadow"
+                        href="#menu">
+                        Explore Menu
+                    </a>
+                    <div class="flex items-center gap-3 font-medium text-white/80">
+                        <span class="material-symbols-outlined text-secondary text-3xl">bolt</span>
+                        <span>Fueling 5,000+ Athletes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative order-1 lg:order-2 flex justify-center">
+                <div class="absolute inset-0 bg-primary/20 rounded-full blur-[80px] lg:blur-[120px]"></div>
+                <div class="relative z-10 w-full max-w-[400px] lg:max-w-none lg:scale-110 animate-float">
+                    <img alt="Premium protein bowl" class="rounded-2xl shadow-2xl w-full object-cover"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQZZX_fhBccjv0J-a0aSDWfJqMa_Nn6qDd0UFjlnFNlMmdysg8PWFQw2FHSDuWF8g78dKhNh684K1ZSQpYP4IHf3d-RRxvA-KVSUWVt7TCXl_6G7eNMBWGr6ob4uHIbJ0ADsZGUJgL-cvoG4RtszZ_35pRndnHqIzi-uzbZHrpyWERZ_qAZger07gIyZduR6SeUeSTGk0vZzkXYG3NkXLXn77IlP7HO3MF_lUe_W7iWNNvImhpwHPmcJfNMC-2hQCDm2VFv42_bdc" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="py-24 bg-surface reveal" id="menu">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-headline font-black tracking-tighter text-on-surface mb-4">The
+                        Protein Series</h2>
+                    <p class="text-on-surface-variant text-lg">Scientifically balanced, chef-prepared meals for peak
+                        performance.</p>
+                </div>
+                <div class="flex gap-3 overflow-x-auto w-full md:w-auto pb-2 no-scrollbar">
+                    <button
+                        class="px-8 py-2.5 rounded-full bg-primary text-white font-bold whitespace-nowrap shadow-lg shadow-primary/20 hover:scale-105 transition-transform active:scale-95">All</button>
+                    <button
+                        class="px-8 py-2.5 rounded-full bg-white border border-zinc-200 text-zinc-600 font-bold whitespace-nowrap hover:bg-primary-container hover:text-primary transition-all active:scale-95">Veg</button>
+                    <button
+                        class="px-8 py-2.5 rounded-full bg-white border border-zinc-200 text-zinc-600 font-bold whitespace-nowrap hover:bg-primary-container hover:text-primary transition-all active:scale-95">Non-Veg</button>
+                </div>
+            </div>
+
+            <div class="mb-32">
+                <div class="flex items-center gap-4 mb-12">
+                    <span class="h-px flex-1 bg-outline-variant/30"></span>
+                    <h3 class="text-sm font-bold tracking-[0.2em] text-primary uppercase">Plant Powered Roots</h3>
+                    <span class="h-px flex-1 bg-outline-variant/30"></span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div
+                        class="bg-white rounded-2xl p-6 group hover:scale-[1.02] transition-all duration-500 shadow-sm hover:shadow-2xl flex flex-col h-full border border-zinc-100">
+                        <div class="mb-6 relative h-48 w-full overflow-hidden rounded-xl">
+                            <img alt="Paneer dish"
+                                class="w-full h-full object-cover -rotate-2 group-hover:rotate-0 transition-transform duration-700 ease-out scale-110 group-hover:scale-100"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1WikU7jWYCbiRuWMm8p1_y5CLRHUuKNv232iL7XSahk8UEqbKC5Yj5QlCbIfJ3oKnbtA6TYTmdTCw_Hy99D3HVbANnzA8IBZv8cTH3bdXvdJfuBvtP4o63VZY49gyMNTIyU_KgZAc6Aujc1_FpW3368JxehkfEeL74YMQFnoyNfOA4r4J5Zs_-sTBaHJWi5bgoTQgJZBMWd6l3G3kN14KgmQBOrfWzTDBhdsA5OzaAoctSd7WLwZ6L_9oFqBk4C8BUZWzedYTSXE" />
+                            <span
+                                class="absolute top-3 right-3 bg-green-600 text-white text-[10px] font-black px-3 py-1 rounded-md tracking-widest z-10 shadow-lg">VEG</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-headline font-bold mb-2">Signature Paneer Grill</h4>
+                            <span
+                                class="inline-block px-3 py-1 bg-zinc-100 text-zinc-600 text-[10px] font-bold rounded-full mb-4">25G
+                                PROTEIN</span>
+                            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Char-grilled artisanal
+                                paneer served with pesto-infused quinoa and seasonal greens.</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-5 border-t border-zinc-50">
+                            <span class="text-2xl font-black text-on-surface">$14.99</span>
+                            <button
+                                class="w-12 h-12 rounded-full bg-zinc-100 text-zinc-900 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group/btn active:scale-90">
+                                <span
+                                    class="material-symbols-outlined text-xl group-hover/btn:scale-110">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl p-6 group hover:scale-[1.02] transition-all duration-500 shadow-sm hover:shadow-2xl flex flex-col h-full border border-zinc-100">
+                        <div class="mb-6 relative h-48 w-full overflow-hidden rounded-xl">
+                            <img alt="Lentil salad"
+                                class="w-full h-full object-cover rotate-2 group-hover:rotate-0 transition-transform duration-700 ease-out scale-110 group-hover:scale-100"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8Kib1I6hq8QrUZo7dWhJ2PKtwX4SUOdSpasL8ui8JAhjR5KBcjKSBjMrdxuu2Cgy_BnHBk8zRa1kNAqOc0eLFhbxvCY9yrDF1mvO8UaH3rXsuSn_Nj-aDs09fNAM95N8janjg1A9wZgFRwyFYTErfHQDKyjz3tP1l_odRM_nUSjhUr4KLlsTfnCaRlp7dLL3mX0x3XqmkeQ_kT-gYXmclfz0ih6lumztTrwgLV7O6ebQsW6V3NbMLZUXAdkcJhYBCmpCwy6GNK94" />
+                            <span
+                                class="absolute top-3 right-3 bg-green-600 text-white text-[10px] font-black px-3 py-1 rounded-md tracking-widest z-10 shadow-lg">VEG</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-headline font-bold mb-2">Power Lentil Bowl</h4>
+                            <span
+                                class="inline-block px-3 py-1 bg-zinc-100 text-zinc-600 text-[10px] font-bold rounded-full mb-4">22G
+                                PROTEIN</span>
+                            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Triple-variety sprouted
+                                lentils with pomegranate balsamic glaze and fresh herbs.</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-5 border-t border-zinc-50">
+                            <span class="text-2xl font-black text-on-surface">$12.50</span>
+                            <button
+                                class="w-12 h-12 rounded-full bg-zinc-100 text-zinc-900 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group/btn active:scale-90">
+                                <span
+                                    class="material-symbols-outlined text-xl group-hover/btn:scale-110">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl p-6 group hover:scale-[1.02] transition-all duration-500 shadow-sm hover:shadow-2xl flex flex-col h-full border border-zinc-100">
+                        <div class="mb-6 relative h-48 w-full overflow-hidden rounded-xl">
+                            <img alt="Tofu plate"
+                                class="w-full h-full object-cover -rotate-1 group-hover:rotate-0 transition-transform duration-700 ease-out scale-110 group-hover:scale-100"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuClrBGtqOp8ECvfATrAZEJ0YiPrQPhCNl9g9HM_EUAA15rlSaMlMCNy8m14FxP77yrotHUfUqn-mhTCG43SLTNB-jSJIX1fZLH58497EM4MJh4afN36zkJ2EWJA9w7bY0zZYp1lq9g2cEbnC-2J03ahbENHewL4MQxg4amk3TyjFVNWaz2VQ9r80_GKOKe6MyQJj4vFXe9a5Huyxq8dUe76Ft44cczZQJQs01UF8h1ok5uXghFkeKYrU5rKa9qDg0WRb2NOCqq6GiE" />
+                            <span
+                                class="absolute top-3 right-3 bg-green-600 text-white text-[10px] font-black px-3 py-1 rounded-md tracking-widest z-10 shadow-lg">VEG</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-headline font-bold mb-2">Miso Glazed Tofu</h4>
+                            <span
+                                class="inline-block px-3 py-1 bg-zinc-100 text-zinc-600 text-[10px] font-bold rounded-full mb-4">28G
+                                PROTEIN</span>
+                            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Organic firm tofu steaks
+                                marinated in 48-hour fermented miso glaze.</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-5 border-t border-zinc-50">
+                            <span class="text-2xl font-black text-on-surface">$13.99</span>
+                            <button
+                                class="w-12 h-12 rounded-full bg-zinc-100 text-zinc-900 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group/btn active:scale-90">
+                                <span
+                                    class="material-symbols-outlined text-xl group-hover/btn:scale-110">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-2xl p-6 group hover:scale-[1.02] transition-all duration-500 shadow-sm hover:shadow-2xl flex flex-col h-full border border-zinc-100">
+                        <div class="mb-6 relative h-48 w-full overflow-hidden rounded-xl">
+                            <img alt="Chickpea bowl"
+                                class="w-full h-full object-cover rotate-1 group-hover:rotate-0 transition-transform duration-700 ease-out scale-110 group-hover:scale-100"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDqVchelQOyyagauCB3K5mITUqBnB6Az0TwQmyg6_yGwItRCRlNqp2NhLDY3ZZNFAUt2r0CEuOk5-6FcvFuD7SWH7ngO34ONdK8HWnCXYuGHJkGFgBqkd8RL9FlzfppOIUknzRLPbcr_NvevXym_Obe5TyekG9dYssJwrFb3GxVq8Os-cH2MIb3odh1pNL4yB97Lo4hWx7EfhRbabWXhO3qNrF05_lYZdQ4EwgNsqHIlmhvFRaz3kdHojtQTYeruYNKyWcfr77-l8" />
+                            <span
+                                class="absolute top-3 right-3 bg-green-600 text-white text-[10px] font-black px-3 py-1 rounded-md tracking-widest z-10 shadow-lg">VEG</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-xl font-headline font-bold mb-2">Mediterranean Chickpeas</h4>
+                            <span
+                                class="inline-block px-3 py-1 bg-zinc-100 text-zinc-600 text-[10px] font-bold rounded-full mb-4">20G
+                                PROTEIN</span>
+                            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Oven-roasted spiced
+                                chickpeas with kale and silky tahini drizzle.</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-5 border-t border-zinc-50">
+                            <span class="text-2xl font-black text-on-surface">$11.99</span>
+                            <button
+                                class="w-12 h-12 rounded-full bg-zinc-100 text-zinc-900 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group/btn active:scale-90">
+                                <span
+                                    class="material-symbols-outlined text-xl group-hover/btn:scale-110">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-20">
+                <div class="flex items-center gap-4 mb-24">
+                    <span class="h-px flex-1 bg-outline-variant/30"></span>
+                    <h3 class="text-sm font-bold tracking-[0.2em] text-secondary uppercase">Elite Animal Protein</h3>
+                    <span class="h-px flex-1 bg-outline-variant/30"></span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-24">
+                    <div
+                        class="bg-white rounded-3xl p-8 group hover:scale-[1.03] transition-all duration-500 shadow-md hover:shadow-2xl flex flex-col relative border border-zinc-50">
+                        <div
+                            class="absolute -top-16 left-1/2 -translate-x-1/2 w-48 h-48 sm:w-56 sm:h-56 group-hover:-top-20 transition-all duration-500">
+                            <img alt="Chicken Breast"
+                                class="w-full h-full object-cover rounded-full shadow-2xl ring-8 ring-white group-hover:ring-primary/10 transition-all"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfTAHpGPUAgyMchKUQut8QXlp7jgUjjq3VMgoNKMoydfreSHaWian0R5EyQTKSQUwcPDbDRsA028N4pvHQLSfpkv4844FGnY4zPBH_272Wagc9_N-MdwTG8RE8RneB5xdtemVpKZrkTW6KnVFMwMmpdgEtNGf0NJKAzR6Wy-hkp1_N9PjIuSe01Lwh5WLSQhGKcz7n_p4T3pkB-eg2tyKPKs-sxs_ttsVfb3Rb6yRsV_Zl2s236CwSGlcWOypG6yLiqpiLlM4LOb0" />
+                        </div>
+                        <div class="mt-32 flex-grow text-center">
+                            <span
+                                class="inline-block px-4 py-1.5 bg-red-50 text-red-700 text-xs font-black rounded-full mb-4 uppercase tracking-widest">Non-Veg</span>
+                            <h4 class="text-2xl font-headline font-black mb-2">Lean Performance Chicken</h4>
+                            <p class="text-primary font-bold text-sm mb-4">42G PROTEIN / 380 CAL</p>
+                            <p class="text-on-surface-variant mb-8 px-4 text-sm leading-relaxed">Sous-vide chicken
+                                breast finished with a lemon-thyme sear and steamed broccoli florets.</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-6 border-t border-zinc-100">
+                            <span class="text-3xl font-black text-on-surface">$18.50</span>
+                            <button
+                                class="btn-cart-non-veg bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-green-800 transition-all duration-300 shadow-lg shadow-primary/20 active:scale-95">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-3xl p-8 group hover:scale-[1.03] transition-all duration-500 shadow-md hover:shadow-2xl flex flex-col relative border border-zinc-50">
+                        <div
+                            class="absolute -top-16 left-1/2 -translate-x-1/2 w-48 h-48 sm:w-56 sm:h-56 group-hover:-top-20 transition-all duration-500">
+                            <img alt="Grilled Fish"
+                                class="w-full h-full object-cover rounded-full shadow-2xl ring-8 ring-white group-hover:ring-primary/10 transition-all"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHHLp2UNGsMwq0QaMj8JmUge_5eVjA01yKox2f4RbxEYEpcQhYA5K5ULLlKKE3jXORBt9QIUTzel8suvl_lkURlDHocPm_X2130Y1la4VfmGfLmXiqgtDJ2WpYUQavY-isCh4KBaXG0saO7suaMAPc-q0Lr8VcPcPbmc22dEJ07jtusVBfCEf48cambQAU8uXWfzm7v_uX9ZaM8OC09oQJgPW-XofSnxudmaXPWs5GpP5H0o31CjHepS2jBDbym28kthlO5-4ecPo" />
+                        </div>
+                        <div class="mt-32 flex-grow text-center">
+                            <span
+                                class="inline-block px-4 py-1.5 bg-red-50 text-red-700 text-xs font-black rounded-full mb-4 uppercase tracking-widest">Non-Veg</span>
+                            <h4 class="text-2xl font-headline font-black mb-2">Wild Caught Salmon</h4>
+                            <p class="text-primary font-bold text-sm mb-4">35G PROTEIN / 420 CAL</p>
+                            <p class="text-on-surface-variant mb-8 px-4 text-sm leading-relaxed">Atlantic salmon fillet,
+                                pan-seared with omega-rich avocado oil and grilled garden asparagus.</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-6 border-t border-zinc-100">
+                            <span class="text-3xl font-black text-on-surface">$22.00</span>
+                            <button
+                                class="btn-cart-non-veg bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-green-800 transition-all duration-300 shadow-lg shadow-primary/20 active:scale-95">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-3xl p-8 group hover:scale-[1.03] transition-all duration-500 shadow-md hover:shadow-2xl flex flex-col relative border border-zinc-50">
+                        <div
+                            class="absolute -top-16 left-1/2 -translate-x-1/2 w-48 h-48 sm:w-56 sm:h-56 group-hover:-top-20 transition-all duration-500">
+                            <img alt="Scrambled Eggs"
+                                class="w-full h-full object-cover rounded-full shadow-2xl ring-8 ring-white group-hover:ring-primary/10 transition-all"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH4laSjI_LlJTqsJ3jssbwBA0UdJ8Hve5mQbMiVs6M7GkrWNA4hma4PyEffBo2_Of2u4Jb9n_0i0O0VIhCX5_dvTU7kxZ_QIu7WC6HMIdrN4lVfSCs5k0MrtuxLVT2vp4RLKCEus9mw10ct3pMderK21pFJWCNIvgCE5C_3_8GBjZqIrSWbIUQbfJQXdEHvf_AAw3K6xfq4Ugl4p1y5GehAN-DaFu3FWXfscAxyMf9uyhRQFwZVDi0MLKzAJGT9MspNrV_viGfdOE" />
+                        </div>
+                        <div class="mt-32 flex-grow text-center">
+                            <span
+                                class="inline-block px-4 py-1.5 bg-red-50 text-red-700 text-xs font-black rounded-full mb-4 uppercase tracking-widest">Non-Veg</span>
+                            <h4 class="text-2xl font-headline font-black mb-2">Omega Morning Plate</h4>
+                            <p class="text-primary font-bold text-sm mb-4">28G PROTEIN / 310 CAL</p>
+                            <p class="text-on-surface-variant mb-8 px-4 text-sm leading-relaxed">Organic pasture-raised
+                                scrambled eggs with smoked salmon bits and sprouted multigrain toast.</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-6 border-t border-zinc-100">
+                            <span class="text-3xl font-black text-on-surface">$16.20</span>
+                            <button
+                                class="btn-cart-non-veg bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-green-800 transition-all duration-300 shadow-lg shadow-primary/20 active:scale-95">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Why Choose Us -->
+
+    <section class="py-24 bg-surface-container-low reveal" id="why-us">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+
+            <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+                <h2 class="text-4xl md:text-5xl font-headline font-black tracking-tighter mb-6">Built for Performance
+                </h2>
+                <p class="text-on-surface-variant text-lg">We bridge the gap between sports science and gourmet dining.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
+
+                <div
+                    class="bg-surface-container-lowest p-8 md:p-10 rounded-xl text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div
+                        class="w-16 h-16 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center mx-auto mb-8 transition-transform group-hover:scale-110">
+                        <span class="material-symbols-outlined text-3xl">fitness_center</span>
+                    </div>
+                    <h3 class="text-xl font-headline font-bold mb-4">High Protein</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Every meal is macro-calculated for
+                        maximum muscle recovery.</p>
+                </div>
+
+                <div
+                    class="bg-surface-container-lowest p-8 md:p-10 rounded-xl text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div
+                        class="w-16 h-16 bg-secondary-container text-on-secondary-container rounded-lg flex items-center justify-center mx-auto mb-8 transition-transform group-hover:scale-110">
+                        <span class="material-symbols-outlined text-3xl">eco</span>
+                    </div>
+                    <h3 class="text-xl font-headline font-bold mb-4">Fresh Ingredients</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Farm-to-fork sourcing from certified
+                        organic providers.</p>
+                </div>
+
+                <div
+                    class="bg-surface-container-lowest p-8 md:p-10 rounded-xl text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div
+                        class="w-16 h-16 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center mx-auto mb-8 transition-transform group-hover:scale-110">
+                        <span class="material-symbols-outlined text-3xl">payments</span>
+                    </div>
+                    <h3 class="text-xl font-headline font-bold mb-4">Affordable</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Elite nutrition shouldn't come with an
+                        elite price tag.</p>
+                </div>
+
+                <div
+                    class="bg-surface-container-lowest p-8 md:p-10 rounded-xl text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div
+                        class="w-16 h-16 bg-secondary-container text-on-secondary-container rounded-lg flex items-center justify-center mx-auto mb-8 transition-transform group-hover:scale-110">
+                        <span class="material-symbols-outlined text-3xl">airport_shuttle</span>
+                    </div>
+                    <h3 class="text-xl font-headline font-bold mb-4">Quick Service</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Hyper-efficient delivery to your home or
+                        office gym.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Nutrition Highlight Section -->
+
+    <section class="py-24 bg-zinc-50 overflow-hidden reveal" id="nutrition">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                <div class="relative order-2 lg:order-1">
+                    <div class="bg-primary/5 absolute -inset-10 md:-inset-20 rounded-full blur-[80px] md:blur-[100px]">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 relative z-10">
+
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-lg shadow-sm border border-zinc-100 sm:translate-y-8 hover:-translate-y-2 transition-all duration-500 group">
+                            <span
+                                class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform"
+                                style='font-variation-settings: "FILL" 1;'>exercise</span>
+                            <h4 class="font-headline font-bold text-lg mb-2 text-zinc-900">Muscle Growth</h4>
+                            <p class="text-xs text-zinc-500 leading-relaxed">Essential amino acids specifically selected
+                                for hypertrophy and tissue repair.</p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-lg shadow-sm border border-zinc-100 hover:-translate-y-2 transition-all duration-500 group">
+                            <span
+                                class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform"
+                                style='font-variation-settings: "FILL" 1;'>battery_charging_full</span>
+                            <h4 class="font-headline font-bold text-lg mb-2 text-zinc-900">Energy Stability</h4>
+                            <p class="text-xs text-zinc-500 leading-relaxed">Prevent insulin spikes with protein-rich
+                                complex carbs for sustained focus.</p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-lg shadow-sm border border-zinc-100 sm:translate-y-8 hover:-translate-y-2 transition-all duration-500 group">
+                            <span
+                                class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform"
+                                style='font-variation-settings: "FILL" 1;'>health_and_safety</span>
+                            <h4 class="font-headline font-bold text-lg mb-2 text-zinc-900">Immune Support</h4>
+                            <p class="text-xs text-zinc-500 leading-relaxed">High-quality proteins are the fundamental
+                                building blocks of immune cells.</p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-lg shadow-sm border border-zinc-100 hover:-translate-y-2 transition-all duration-500 group">
+                            <span
+                                class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform"
+                                style='font-variation-settings: "FILL" 1;'>speed</span>
+                            <h4 class="font-headline font-bold text-lg mb-2 text-zinc-900">Metabolic Lift</h4>
+                            <p class="text-xs text-zinc-500 leading-relaxed">The thermal effect of protein helps your
+                                body burn more fat naturally.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <span class="text-xs font-bold tracking-[0.2em] text-primary mb-6 block uppercase">Nutrition
+                        Science</span>
+                    <h2
+                        class="text-4xl md:text-5xl font-headline font-black tracking-tighter text-zinc-900 mb-8 leading-tight">
+                        Beyond Just "Food" — <br class="hidden md:block"> It's Biological Data
+                    </h2>
+                    <p class="text-zinc-600 text-lg leading-relaxed mb-10">
+                        Our recipes are designed by clinical nutritionists to ensure that every gram of protein is
+                        bioavailable. We don't just count macros; we select ingredients that work synergistically for
+                        your health.
+                    </p>
+
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-4 group">
+                            <span
+                                class="material-symbols-outlined text-primary mt-0.5 group-hover:scale-110 transition-transform">check_circle</span>
+                            <span class="font-bold text-zinc-800">Complete amino acid profiles in every bowl</span>
+                        </li>
+                        <li class="flex items-start gap-4 group">
+                            <span
+                                class="material-symbols-outlined text-primary mt-0.5 group-hover:scale-110 transition-transform">check_circle</span>
+                            <span class="font-bold text-zinc-800">Anti-inflammatory preparation techniques</span>
+                        </li>
+                        <li class="flex items-start gap-4 group">
+                            <span
+                                class="material-symbols-outlined text-primary mt-0.5 group-hover:scale-110 transition-transform">check_circle</span>
+                            <span class="font-bold text-zinc-800">Zero refined sugars or hydrogenated oils</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-surface-container reveal" id="testimonials">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2
+                class="text-center text-5xl md:text-6xl font-headline font-black italic tracking-tighter text-zinc-900 mb-20">
+                The <span class="text-[#006B1B]">Klen</span> Community
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="bg-surface p-10 rounded-xl editorial-shadow relative premium-transition hover:-translate-y-2 card-hover">
+                    <span
+                        class="material-symbols-outlined absolute -top-4 -left-4 text-6xl text-primary/10">format_quote</span>
+                    <p class="text-on-surface mb-8 italic leading-relaxed">"The Salmon Bowl changed my recovery game.
+                        I'm finally hitting my protein targets without the bloating of supplements."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary/20">
+                            <img alt="User 1" class="w-full h-full object-cover"
+                                data-alt="Close up portrait of a fit young man smiling in a studio with soft lighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkHUiLDfMcqIiBn2D83DxUh2TWL2GeX85bUH4oStRmGE2mq622hi67jBNE8bBx1fC3EcyEQqES8drJUy0vff3h5MSRVXV_ylyCXMjngcpDxnbbHzuUvAZcsWo8nE9gDMvG5rPCckkqpog4ckhHtsrXBFQiBPB4WaqGZI4TVzBICUDcMGwxyLbG9I2aSgwwNE0htMTtKgS3lzOwIxXPmW3Tk4nD9XNtdVX5B89Fny3ZThomvi8CfrNWEbIgJVvn1NAuGWSoD2RPQsM" />
+                        </div>
+                        <div>
+                            <p class="font-bold">Marcus Chen</p>
+                            <p class="text-xs text-on-surface-variant">Competitive Crossfit Athlete</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface p-10 rounded-xl editorial-shadow relative premium-transition hover:-translate-y-2 card-hover">
+                    <span
+                        class="material-symbols-outlined absolute -top-4 -left-4 text-6xl text-primary/10">format_quote</span>
+                    <p class="text-on-surface mb-8 italic leading-relaxed">"Being a vegetarian and getting 100g of
+                        protein a day was impossible until I found Klen. The Tofu steaks are insane!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary/20">
+                            <img alt="User 2" class="w-full h-full object-cover"
+                                data-alt="Close up portrait of a young woman with a warm friendly expression and professional lighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOBq_iaTUT7_mLXdO1v9hP50_cHs8FdR5X1z44XWDnHnUHJuQgKxTTtew3rmQHOW4R4IsLo8AOc-EfP2fL-bC_4hKOiGk9H8KJzpmAmKD9hlwqVNLsDboFD5-KcG1yMn6H5FvhpPRI6rwIL52Zl8qX8Vlio02AiPekq8xdmRPCRl_sn2m8oFdM6yvWO0Ic1-qlB76riu8uV0M0gkXRuV01LDSW1ahl_w9DRAoSd29h-9q4IMZNftlyJY1YMBORc8e8ShUgUOQTUAw" />
+                        </div>
+                        <div>
+                            <p class="font-bold">Sarah Jenkins</p>
+                            <p class="text-xs text-on-surface-variant">Yoga Instructor</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface p-10 rounded-xl editorial-shadow relative premium-transition hover:-translate-y-2 card-hover">
+                    <span
+                        class="material-symbols-outlined absolute -top-4 -left-4 text-6xl text-primary/10">format_quote</span>
+                    <p class="text-on-surface mb-8 italic leading-relaxed">"I work 60 hours a week. Having high-protein,
+                        chef-grade meals delivered means I don't have to choose between work and my health."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden ring-2 ring-primary/20">
+                            <img alt="User 3" class="w-full h-full object-cover"
+                                data-alt="Headshot of a middle-aged businessman in a professional setting with soft background blur"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZqqX3pQ-hLM_o85RDEFQkaHEWboYsxAb6_sUwYtcGy7dExc0XkoBq4leqeaqpyf1v71p72_JmE1HOVkXLnYDkkzlFx0OdLJTlX-9jU5OK3xJW56quBINOFpH3IYjSJbxkOXluFTAyW5oxvPwFTz7AOPKmQh9d7B1qkeqv-O9eDG5GctiMXck3yd_qmDOrct2QcKUKuKtGEmu3DZgo2M8pyj-6JKv5ixWsWYUB7RWHbcVI6cVJjCFZz4-1FdDrx2ajQ0qnXAqzZUo" />
+                        </div>
+                        <div>
+                            <p class="font-bold">David Rivera</p>
+                            <p class="text-xs text-on-surface-variant">Tech Executive</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-[#151d15]">
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="text-xl font-black mb-8 text-white">Klen Nourishment</div>
+                <p class="font-['Inter'] text-sm leading-relaxed max-w-sm mb-8 text-zinc-400">
+                    Elevating human performance through precise nutrition. We serve those who demand more from their
+                    bodies and their food.
+                </p>
+                <div class="flex gap-6">
+                    <a aria-label="Instagram" class="text-zinc-400 hover:text-primary transition-all hover:scale-110"
+                        href="#">
+                        <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a aria-label="Facebook" class="text-zinc-400 hover:text-primary transition-all hover:scale-110"
+                        href="#">
+                        <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a aria-label="X (Twitter)" class="text-zinc-400 hover:text-primary transition-all hover:scale-110"
+                        href="#">
+                        <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-headline font-bold mb-6 text-white">Contact</h4>
+                <ul class="space-y-4 text-sm font-['Inter'] text-zinc-400">
+                    <li class="premium-transition hover:text-primary cursor-pointer">124 Performance Way</li>
+                    <li class="premium-transition hover:text-primary cursor-pointer">Wellness District, CA 90210</li>
+                    <li class="premium-transition hover:text-primary cursor-pointer">hello@klennourishment.com</li>
+                    <li class="premium-transition hover:text-primary cursor-pointer">+91 98765 43210</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-headline font-bold mb-6 text-white">Legal</h4>
+                <ul class="space-y-4 text-sm font-['Inter'] text-zinc-400">
+                    <li><a class="premium-transition hover:text-primary" href="#">Privacy Policy</a></li>
+                    <li><a class="premium-transition hover:text-primary" href="#">Terms of Service</a></li>
+                    <li><a class="premium-transition hover:text-primary text-zinc-400" href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-zinc-800 text-center text-zinc-500 text-sm">© 2026
+            Klen Nourishment. All rights reserved.</div>
+
+    </footer>
+
+
+    <script>
+        // This function watches the sections as you scroll
+        const observerOptions = {
+            threshold: 0.15 // Triggers when 15% of the section is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // This adds the .active class which triggers the CSS transition
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        // Tell the observer to watch everything with the "reveal" class
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Ensure reveal works if JS is active */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <script>
+        // Scroll Reveal Intersection Observer
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, {
+            threshold: 0.15
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+    </script>
+
+</body>
+
+</html>
