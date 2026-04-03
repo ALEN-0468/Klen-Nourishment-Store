@@ -5,212 +5,15 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Klen Nourishment | Premium High-Protein Fuel</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
 
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "secondary-container": "#ffc791",
-                        "on-background": "#2d2f2f",
-                        "background": "#f6f6f6",
-                        "error-dim": "#b92902",
-                        "on-error": "#ffefec",
-                        "on-tertiary-fixed": "#00460e",
-                        "secondary-fixed-dim": "#ffb467",
-                        "secondary-fixed": "#ffc791",
-                        "inverse-primary": "#91f78e",
-                        "surface-container": "#e7e8e8",
-                        "on-secondary-container": "#6a3c00",
-                        "surface-dim": "#d3d5d5",
-                        "inverse-on-surface": "#9c9d9d",
-                        "inverse-surface": "#0c0f0f",
-                        "on-surface": "#2d2f2f",
-                        "surface-variant": "#dbdddd",
-                        "on-surface-variant": "#5a5c5c",
-                        "surface-container-highest": "#dbdddd",
-                        "outline": "#767777",
-                        "error": "#b02500",
-                        "error-container": "#f95630",
-                        "on-tertiary-fixed-variant": "#12661e",
-                        "on-primary-container": "#005e17",
-                        "on-primary": "#d1ffc8",
-                        "on-secondary-fixed-variant": "#774400",
-                        "on-tertiary-container": "#005c15",
-                        "surface-container-low": "#f0f1f1",
-                        "tertiary-container": "#9df197",
-                        "on-secondary-fixed": "#4f2c00",
-                        "on-error-container": "#520c00",
-                        "tertiary-dim": "#025d16",
-                        "tertiary-fixed-dim": "#90e28a",
-                        "outline-variant": "#acadad",
-                        "secondary-dim": "#764400",
-                        "surface-bright": "#f6f6f6",
-                        "on-secondary": "#fff0e5",
-                        "on-primary-fixed-variant": "#00691a",
-                        "on-primary-fixed": "#00480f",
-                        "tertiary-fixed": "#9df197",
-                        "primary-container": "#91f78e",
-                        "surface-container-high": "#e1e3e3",
-                        "primary-fixed": "#91f78e",
-                        "on-tertiary": "#d1ffc8",
-                        "primary-fixed-dim": "#83e881",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-tint": "#006b1b",
-                        "primary": "#006b1b",
-                        "tertiary": "#176a21",
-                        "surface": "#f6f6f6",
-                        "secondary": "#874e00",
-                        "primary-dim": "#005d16"
-                    },
-                    fontFamily: {
-                        "headline": ["Plus Jakarta Sans"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    },
-                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
-
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
-        .editorial-shadow {
-            box-shadow: 0 40px 40px rgba(45, 47, 47, 0.06);
-            transition: box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .card-hover:hover {
-            box-shadow: 0 50px 60px rgba(45, 47, 47, 0.12);
-        }
-
-        /* Premium Transitions */
-        .premium-transition {
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        /* Floating Animation */
-        @keyframes float {
-            0% {
-                transform: translateY(0px) rotate(3deg);
-            }
-
-            50% {
-                transform: translateY(-20px) rotate(5deg);
-            }
-
-            100% {
-                transform: translateY(0px) rotate(3deg);
-            }
-        }
-
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        /* Scroll Reveal Effect */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Button Glow & Feedback */
-        .btn-premium {
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-premium:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.1);
-            box-shadow: 0 10px 20px -5px rgba(0, 107, 27, 0.3);
-        }
-
-        .btn-premium:active {
-            transform: scale(0.96);
-        }
-
-        /* Nav Link Animation */
-        .nav-link {
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: currentColor;
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-
-
-
-        /* Non-Veg Button Hover Effect */
-        .btn-cart-non-veg {
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-cart-non-veg:hover {
-            /* Lift the button */
-            transform: translateY(-3px);
-            /* Intensify the primary green shadow */
-            box-shadow: 0 10px 25px -5px rgba(0, 107, 27, 0.4);
-            /* Slight brightness boost */
-            filter: brightness(1.1);
-        }
-
-        .btn-cart-non-veg:active {
-            /* Feedback when clicked */
-            transform: translateY(-1px) scale(0.96);
-        }
-
-        /* Optional: Subtle Shine Flash Effect */
-        .btn-cart-non-veg::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg,
-                    transparent,
-                    rgba(255, 255, 255, 0.2),
-                    transparent);
-            transition: 0.5s;
-        }
-
-        .btn-cart-non-veg:hover::after {
-            left: 100%;
-        }
-    </style>
+    
+    
 </head>
 
 <body class="bg-surface font-body text-on-surface antialiased">
@@ -231,7 +34,7 @@
                     <div class="flex items-baseline">
                         <span
                             class="text-xl font-headline font-black tracking-tighter leading-none text-zinc-900 group-hover:text-primary transition-colors">
-                            Klen
+                            KLEN
                         </span>
                     </div>
                     <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-zinc-500 leading-none mt-1">
@@ -285,67 +88,7 @@
         </div>
     </nav>
 
-    <style>
-        /* Underline Animation */
-        .mobile-nav-link {
-            position: relative;
-            padding-bottom: 4px;
-            transition: color 0.3s ease;
-        }
-
-        .mobile-nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: #006b1b;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .mobile-nav-link:hover::after {
-            width: 60%;
-        }
-
-        /* Staggered Entry Animation for Links */
-        #mobile-menu.active .mobile-nav-link {
-            animation: slideIn 0.5s ease forwards;
-            opacity: 0;
-        }
-
-        #mobile-menu.active .mobile-nav-link:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        #mobile-menu.active .mobile-nav-link:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        #mobile-menu.active .mobile-nav-link:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        #mobile-menu.active .mobile-nav-link:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-        #mobile-menu.active .mobile-nav-link:nth-child(5) { 
-            transition-delay: 0.5s; 
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+   
 
     <script>
         const btn = document.getElementById('menu-btn');
@@ -403,7 +146,7 @@
                     class="text-5xl sm:text-6xl lg:text-8xl font-headline font-black leading-[1.1] lg:leading-[0.9] tracking-tighter mb-8 text-white">
                     Fuel Your Body <br />with <span class="text-primary">Protein</span> Power
                 </h1>
-                <p class="text-lg sm:text-xl max-w-lg mb-10 leading-relaxed text-zinc-300">
+                <p class="text-lg sm:text-xl max-w-md mb-10 leading-[2] text-zinc-300">
                     Delicious Veg & Non-Veg Protein Meals crafted for peak athletic performance and everyday vitality.
                 </p>
 
@@ -957,28 +700,7 @@
             observer.observe(el);
         });
     </script>
-    <style>
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
 
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        /* Ensure reveal works if JS is active */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
 
     <script>
         // Scroll Reveal Intersection Observer
